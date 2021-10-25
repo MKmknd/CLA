@@ -1,0 +1,25 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "4d991676b984bfa6428d9ffe84ff60195a182eec8a305e06c15ea5b69dd3daf6"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.8"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "utils": {
+            "git": "https://github.com/MKmknd/Utils",
+            "ref": "c80ce7570446f4980f561a18bebda69a4d7179d7"
+        }
+    },
+    "develop": {}
+}

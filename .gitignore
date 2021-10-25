@@ -1,0 +1,14 @@
+# ide
+venv
+.venv
+.idea
+
+# build files
+build
+dist
+*.egg-info
+Utils.egg-info/
+
+# Mac files
+.DS_Store
+*.swp
