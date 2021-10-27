@@ -6,7 +6,7 @@ from revlink import make_db
 
 # revision linking algorithm
 class RLA:
-    def __init__(self, p_name, repo_dir, out_dir, issue2hash_dict_BASE_DIR, db_path, target_ILA_num_list=None, blind_rate=50):
+    def __init__(self, p_name, repo_dir, out_dir, issue2hash_dict_BASE_DIR, db_path, target_ILA_num_list=None, delete_rate=50):
         self.p_name = p_name # project name (repository name)
         self.repo_dir = repo_dir # path/to/cregit/repository
         self.out_dir = out_dir # please input an output directory
@@ -27,7 +27,7 @@ class RLA:
         self.WORD_ASSOC_TH = 5
         self.COMMENT_COS_TH = 4
         self.NSD_SIM_COS_TH = 2
-        self.blind_rate = blind_rate
+        self.delete_rate = delete_rate
 
         self.ILA_dict_update()
 
@@ -36,7 +36,7 @@ class RLA:
 
     def ILA_dict_update(self):
 
-        self.ILA_dict = {"1": "{0}_keyword_extraction_{1}_with_restriction".format(self.p_name, self.blind_rate),
+        self.ILA_dict = {"1": "{0}_keyword_extraction_{1}_with_restriction".format(self.p_name, self.delete_rate),
                 "all": "{0}_all_commits".format(self.p_name)}
 
         self.key_pic_path = "{0}/{1}.pickle".format(self.issue2hash_dict_BASE_DIR, self.ILA_dict["1"])
